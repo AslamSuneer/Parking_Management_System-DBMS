@@ -1,0 +1,42 @@
+Category
+------------------------------------------------------------------------------------------
+*id (int, primary key, auto-increment): Unique identifier for each category.
+*name (text): Vehicle category name.
+*rate (double): Parking rate.
+------------------------------------------------------------------------------------------
+Parked List
+------------------------------------------------------------------------------------------
+*id (int, primary key, auto-increment): Unique identifier for each parked vehicle.
+*category_id (int): Foreign key linking to the vehicle category.
+*location_id (int): Foreign key linking to parking location.
+*ref_no (varchar, 100): Unique reference number for each vehicle.
+*vehicle_brand (varchar, 200): Vehicle brand.
+*vehicle_registration (varchar, 15): Registration number.
+*owner (text): Vehicle owner's name.
+*vehicle_description (text): Description of the vehicle.
+*status (tinyint, default 1): Parking status (1 = in, 2 = out).
+*amount_due, amount_tendered, amount_change (double): Transaction details.
+*date_created (datetime, default current timestamp): Entry date.
+------------------------------------------------------------------------------------------
+Parking Locations
+------------------------------------------------------------------------------------------
+*id (int, primary key, auto-increment): Unique identifier for each location.
+*location (text): Location name.
+*capacity (int): Number of spaces available.
+*category_id (int): Vehicle category permitted in this location.
+------------------------------------------------------------------------------------------
+Parking Movement
+------------------------------------------------------------------------------------------
+*id (int, primary key, auto-increment): Unique identifier for each movement record.
+*pl_id (int): Foreign key linking to parked list entry.
+*status (tinyint, default 1): Movement status (1 = in, 2 = out).
+*created_timestamp (datetime, default current timestamp): Timestamp for each movement.
+------------------------------------------------------------------------------------------
+Users
+-------------------------------------------------------------------------------------
+id (int, primary key, auto-increment): Unique identifier for each user.
+name (text): User's name.
+type (tinyint, default 2): Role type (1 = Admin, 2 = Staff, 3 = User).
+username (varchar, 100): Login username.
+password (text): User password (encrypted).
+------------------------------------------------------------------------------------------
