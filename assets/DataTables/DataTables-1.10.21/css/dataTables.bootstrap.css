@@ -1,3 +1,4 @@
+/* Styling for the DataTable */
 table.dataTable {
   clear: both;
   margin-top: 6px !important;
@@ -5,55 +6,75 @@ table.dataTable {
   max-width: none !important;
   border-collapse: separate !important;
 }
+
+/* Adjusts box-sizing for table cells */
 table.dataTable td,
 table.dataTable th {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
+
+/* Center-aligns empty cells */
 table.dataTable td.dataTables_empty,
 table.dataTable th.dataTables_empty {
   text-align: center;
 }
+
+/* Prevents line breaks in specific cells */
 table.dataTable.nowrap th,
 table.dataTable.nowrap td {
   white-space: nowrap;
 }
 
+/* Controls font weight and alignment for 'length' dropdown */
 div.dataTables_wrapper div.dataTables_length label {
   font-weight: normal;
   text-align: left;
   white-space: nowrap;
 }
+
 div.dataTables_wrapper div.dataTables_length select {
   width: 75px;
   display: inline-block;
 }
+
+/* Aligns 'filter' input to the right */
 div.dataTables_wrapper div.dataTables_filter {
   text-align: right;
 }
+
+/* Adjusts styling for 'filter' label */
 div.dataTables_wrapper div.dataTables_filter label {
   font-weight: normal;
   white-space: nowrap;
   text-align: left;
 }
+
 div.dataTables_wrapper div.dataTables_filter input {
   margin-left: 0.5em;
   display: inline-block;
   width: auto;
 }
+
+/* Controls padding for 'info' text */
 div.dataTables_wrapper div.dataTables_info {
   padding-top: 8px;
   white-space: nowrap;
 }
+
+/* Aligns pagination controls to the right */
 div.dataTables_wrapper div.dataTables_paginate {
   margin: 0;
   white-space: nowrap;
   text-align: right;
 }
+
 div.dataTables_wrapper div.dataTables_paginate ul.pagination {
   margin: 2px 0;
   white-space: nowrap;
 }
+
+/* Positioning for the 'processing' indicator */
 div.dataTables_wrapper div.dataTables_processing {
   position: absolute;
   top: 50%;
@@ -65,16 +86,23 @@ div.dataTables_wrapper div.dataTables_processing {
   padding: 1em 0;
 }
 
-table.dataTable thead > tr > th.sorting_asc, table.dataTable thead > tr > th.sorting_desc, table.dataTable thead > tr > th.sorting,
+/* Padding and icon positioning for sortable columns */
+table.dataTable thead > tr > th.sorting_asc,
+table.dataTable thead > tr > th.sorting_desc,
+table.dataTable thead > tr > th.sorting,
 table.dataTable thead > tr > td.sorting_asc,
 table.dataTable thead > tr > td.sorting_desc,
 table.dataTable thead > tr > td.sorting {
   padding-right: 30px;
 }
+
+/* Removes outline when header cells are clicked */
 table.dataTable thead > tr > th:active,
 table.dataTable thead > tr > td:active {
   outline: none;
 }
+
+/* Cursor and icon styling for sortable headers */
 table.dataTable thead .sorting,
 table.dataTable thead .sorting_asc,
 table.dataTable thead .sorting_desc,
@@ -83,6 +111,8 @@ table.dataTable thead .sorting_desc_disabled {
   cursor: pointer;
   position: relative;
 }
+
+/* Styling for sort icons in headers */
 table.dataTable thead .sorting:after,
 table.dataTable thead .sorting_asc:after,
 table.dataTable thead .sorting_desc:after,
@@ -95,51 +125,59 @@ table.dataTable thead .sorting_desc_disabled:after {
   font-family: 'Glyphicons Halflings';
   opacity: 0.5;
 }
+
+/* Sort icons for default, ascending, and descending states */
 table.dataTable thead .sorting:after {
   opacity: 0.2;
-  content: "\e150";
-  /* sort */
+  content: "\e150"; /* Sort icon */
 }
 table.dataTable thead .sorting_asc:after {
-  content: "\e155";
-  /* sort-by-attributes */
+  content: "\e155"; /* Ascending sort icon */
 }
 table.dataTable thead .sorting_desc:after {
-  content: "\e156";
-  /* sort-by-attributes-alt */
+  content: "\e156"; /* Descending sort icon */
 }
 table.dataTable thead .sorting_asc_disabled:after,
 table.dataTable thead .sorting_desc_disabled:after {
   color: #eee;
 }
 
+/* Removes extra margin in scrollable tables */
 div.dataTables_scrollHead table.dataTable {
   margin-bottom: 0 !important;
 }
 
+/* Styling for scrollable tables */
 div.dataTables_scrollBody > table {
   border-top: none;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
+
+/* Hides sorting icons in the scrollable body */
 div.dataTables_scrollBody > table > thead .sorting:after,
 div.dataTables_scrollBody > table > thead .sorting_asc:after,
 div.dataTables_scrollBody > table > thead .sorting_desc:after {
   display: none;
 }
+
+/* Removes border from first row of scrollable table */
 div.dataTables_scrollBody > table > tbody > tr:first-child > th,
 div.dataTables_scrollBody > table > tbody > tr:first-child > td {
   border-top: none;
 }
 
+/* Ensures scrollable footer styling */
 div.dataTables_scrollFoot > .dataTables_scrollFootInner {
   box-sizing: content-box;
 }
+
 div.dataTables_scrollFoot > .dataTables_scrollFootInner > table {
   margin-top: 0 !important;
   border-top: none;
 }
 
+/* Responsive styles for mobile screens */
 @media screen and (max-width: 767px) {
   div.dataTables_wrapper div.dataTables_length,
   div.dataTables_wrapper div.dataTables_filter,
@@ -148,9 +186,13 @@ div.dataTables_scrollFoot > .dataTables_scrollFootInner > table {
     text-align: center;
   }
 }
+
+/* Padding for condensed table header cells */
 table.dataTable.table-condensed > thead > tr > th {
   padding-right: 20px;
 }
+
+/* Sort icon positioning for condensed tables */
 table.dataTable.table-condensed .sorting:after,
 table.dataTable.table-condensed .sorting_asc:after,
 table.dataTable.table-condensed .sorting_desc:after {
@@ -158,33 +200,40 @@ table.dataTable.table-condensed .sorting_desc:after {
   right: 6px;
 }
 
+/* Border adjustments for bordered tables */
 table.table-bordered.dataTable {
   border-right-width: 0;
 }
+
 table.table-bordered.dataTable th,
 table.table-bordered.dataTable td {
   border-left-width: 0;
 }
-table.table-bordered.dataTable th:last-child, table.table-bordered.dataTable th:last-child,
-table.table-bordered.dataTable td:last-child,
+
+table.table-bordered.dataTable th:last-child,
 table.table-bordered.dataTable td:last-child {
   border-right-width: 1px;
 }
+
 table.table-bordered.dataTable tbody th,
 table.table-bordered.dataTable tbody td {
   border-bottom-width: 0;
 }
 
+/* Removes bottom border in scrollable bordered tables */
 div.dataTables_scrollHead table.table-bordered {
   border-bottom-width: 0;
 }
 
+/* Responsive adjustments in table wrapper */
 div.table-responsive > div.dataTables_wrapper > div.row {
   margin: 0;
 }
+
 div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:first-child {
   padding-left: 0;
 }
+
 div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:last-child {
   padding-right: 0;
 }
