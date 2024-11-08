@@ -1,143 +1,126 @@
-/* General styling for DataTables */
+/* General DataTable styling */
 table.dataTable {
   clear: both;
-  margin: 0.5em 0 !important; /* Margin around the table */
-  max-width: none !important; /* Removes width limit */
-  width: 100%; /* Full width for responsive design */
+  margin: 0.5em 0 !important;
+  max-width: none !important;
+  width: 100%;
 }
 
-/* Table cell styling with box-sizing adjustment */
+/* Cell box-sizing adjustments */
 table.dataTable td,
 table.dataTable th {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 
-/* Center alignment for empty table cells */
+/* Center alignment for empty cells */
 table.dataTable td.dataTables_empty,
 table.dataTable th.dataTables_empty {
   text-align: center;
 }
 
-/* Prevent text wrapping in cells with nowrap class */
+/* Prevents text wrapping in specified cells */
 table.dataTable.nowrap th,
 table.dataTable.nowrap td {
   white-space: nowrap;
 }
 
-/* DataTables wrapper styling */
+/* Wrapper positioning for relative placement */
 div.dataTables_wrapper {
-  position: relative; /* For absolute positioning of processing message */
+  position: relative;
 }
 
-/* Length control label and dropdown */
+/* Length dropdown styling */
 div.dataTables_wrapper div.dataTables_length label {
-  float: left; /* Align label to the left */
+  float: left;
   text-align: left;
   margin-bottom: 0;
 }
 div.dataTables_wrapper div.dataTables_length select {
-  width: 75px; /* Sets a fixed width for dropdown */
+  width: 75px;
   margin-bottom: 0;
 }
 
 /* Filter label and input positioning */
 div.dataTables_wrapper div.dataTables_filter label {
-  float: right; /* Align label to the right */
+  float: right;
   margin-bottom: 0;
 }
 div.dataTables_wrapper div.dataTables_filter input {
   display: inline-block !important;
   width: auto !important;
   margin-bottom: 0;
-  margin-left: 0.5em; /* Space between label and input */
+  margin-left: 0.5em;
 }
 
-/* Info section styling */
+/* Info section padding */
 div.dataTables_wrapper div.dataTables_info {
   padding-top: 2px;
 }
 
 /* Pagination alignment */
 div.dataTables_wrapper div.dataTables_paginate {
-  float: right; /* Align pagination to the right */
+  float: right;
   margin: 0;
 }
 
 /* Processing message styling */
 div.dataTables_wrapper div.dataTables_processing {
-  position: absolute; /* Center the processing message */
+  position: absolute;
   top: 50%;
   left: 50%;
   width: 200px;
-  margin-left: -100px; /* Center horizontally */
-  margin-top: -26px; /* Center vertically */
+  margin-left: -100px;
+  margin-top: -26px;
   text-align: center;
   padding: 1rem 0;
 }
 
-/* Sorting column padding for sorting indicators */
+/* Header sorting padding */
 table.dataTable thead > tr > th.sorting_asc,
 table.dataTable thead > tr > th.sorting_desc,
 table.dataTable thead > tr > th.sorting,
 table.dataTable thead > tr > td.sorting_asc,
 table.dataTable thead > tr > td.sorting_desc,
 table.dataTable thead > tr > td.sorting {
-  padding-right: 1.5rem; /* Extra padding for sorting icon */
+  padding-right: 1.5rem;
 }
 
-/* Removes focus outline on header cell activation */
+/* Remove focus outline on header cell activation */
 table.dataTable thead > tr > th:active,
 table.dataTable thead > tr > td:active {
   outline: none;
 }
 
-/* Styling for sorting headers (sortable columns) */
+/* Sorting cursor style */
 table.dataTable thead .sorting,
 table.dataTable thead .sorting_asc,
 table.dataTable thead .sorting_desc,
 table.dataTable thead .sorting_asc_disabled,
 table.dataTable thead .sorting_desc_disabled {
-  cursor: pointer; /* Cursor changes to pointer on hover */
+  cursor: pointer;
   background-repeat: no-repeat;
-  background-position: center right; /* Aligns icon to the right */
+  background-position: center right;
 }
 
-/* Background images for sorting indicators */
-table.dataTable thead .sorting {
-  background-image: url("../images/sort_both.png"); /* Both directions */
-}
-table.dataTable thead .sorting_asc {
-  background-image: url("../images/sort_asc.png"); /* Ascending */
-}
-table.dataTable thead .sorting_desc {
-  background-image: url("../images/sort_desc.png"); /* Descending */
-}
-table.dataTable thead .sorting_asc_disabled {
-  background-image: url("../images/sort_asc_disabled.png"); /* Asc disabled */
-}
-table.dataTable thead .sorting_desc_disabled {
-  background-image: url("../images/sort_desc_disabled.png"); /* Desc disabled */
-}
-
-/* Styling adjustments for scrollable table header */
+/* Scrollable table header adjustments */
 div.dataTables_scrollHead table {
   margin-bottom: 0 !important;
 }
 
-/* Styling adjustments for scrollable table body */
+/* Scrollable table body adjustments */
 div.dataTables_scrollBody table {
-  border-top: none; /* Removes border on top */
+  border-top: none;
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
 div.dataTables_scrollBody table tbody tr:first-child th,
 div.dataTables_scrollBody table tbody tr:first-child td {
-  border-top: none; /* Removes top border on first row */
+  border-top: none;
 }
 
-/* Styling adjustments for scrollable table footer */
+/* Scrollable table footer adjustments */
 div.dataTables_scrollFoot table {
   margin-top: 0 !important;
-  border-top: none; /* Removes border on top */
+  border-top: none;
 }
